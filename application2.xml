@@ -1,0 +1,33 @@
+#开发环境
+server:
+  port: 8201
+spring:
+  #指定是哪一个配置
+  profiles: dev
+  application:
+    name: com-syzw-config-client-dev
+eureka:
+  client:
+    server-url:
+      defualtZone: http://eureka-8082.com:8082/eureka,http://eureka-8083.com:8083/eureka
+
+
+#这种配置方式，就相当于在一个配置文件中配置几种配置。如果要读取该配置文件中的配置，
+#配置中心启动后可以直接使用localhost:端口号/application-test.xml，这个test其实就是spring：profiles的值。
+#这个三个横线是分割每个配置节点的标识，标识一个配置节点结束了
+---
+#开发环境
+server:
+  port: 8202
+spring:
+  #指定是哪一个配置
+  profiles: test
+  application:
+    name: com-syzw-config-client-test
+eureka:
+  client:
+    server-url:
+      defualtZone: http://eureka-8082.com:8082/eureka,http://eureka-8083.com:8083/eureka
+
+
+
