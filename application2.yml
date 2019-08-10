@@ -8,12 +8,19 @@ spring:
     name: com-syzw-config-client-dev
 eureka:
   client:
-    #register-with-eureka: false
-   # fetch-registry: false
-    server-url:
-      defualtZone: http://eureka-8082.com:8082/eureka,http://eureka-8083.com:8083/eureka
-    
-    
+    #当前服务是否是注册中心
+    fetch-registry: false
+    #指定要注册的eureka  server的地址
+    #将当前服务注册进eureka  server
+    register-with-eureka: true
+    serviceUrl:
+      defaultZone: http://eureka-8082.com:8082/eureka,http://eureka-8083.com:8083/eureka,http://eureka-8081.com:8081/eureka
+
+  instance:
+    #显示ip地址
+    prefer-ip-address: true
+    #指定ip地址
+    ip-address: localhost
       
 
 
@@ -31,7 +38,16 @@ spring:
     name: com-syzw-config-client-test
 eureka:
   client:
-   #register-with-eureka: false
-   # fetch-registry: false
-    server-url:
-      defualtZone: http://eureka-8082.com:8082/eureka,http://eureka-8083.com:8083/eureka
+    #当前服务是否是注册中心
+    fetch-registry: false
+    #指定要注册的eureka  server的地址
+    #将当前服务注册进eureka  server
+    register-with-eureka: true
+    serviceUrl:
+      defaultZone: http://eureka-8082.com:8082/eureka,http://eureka-8083.com:8083/eureka,http://eureka-8081.com:8081/eureka
+
+  instance:
+    #显示ip地址
+    prefer-ip-address: true
+    #指定ip地址
+    ip-address: localhost
