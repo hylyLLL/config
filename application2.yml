@@ -15,13 +15,12 @@ eureka:
     register-with-eureka: true
     serviceUrl:
       defaultZone: http://eureka-8082.com:8082/eureka,http://eureka-8083.com:8083/eureka,http://eureka-8081.com:8081/eureka
-
   instance:
     #显示ip地址
     prefer-ip-address: true
     #指定ip地址
     ip-address: localhost
-      
+
 
 
 #这种配置方式，就相当于在一个配置文件中配置几种配置。如果要读取该配置文件中的配置，
@@ -45,7 +44,6 @@ eureka:
     register-with-eureka: true
     serviceUrl:
       defaultZone: http://eureka-8082.com:8082/eureka,http://eureka-8083.com:8083/eureka,http://eureka-8081.com:8081/eureka
-
   instance:
     #显示ip地址
     prefer-ip-address: true
