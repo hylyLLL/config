@@ -1,4 +1,10 @@
 #eureka server端的配置
+spring:
+  profiles:
+    active:
+    - dev
+
+---
 server:
   port: 8081
 spring:
