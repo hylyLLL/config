@@ -2,6 +2,8 @@ spring:
   profiles: dev  #开发环境
   application:
     name: zull-gateway-dev    
+server:
+  port: 9090
 #   将当前模块配置进eureka  
 eureka:
   client:
@@ -17,6 +19,8 @@ spring:
   profiles: test  #测试环境
   application:
     name: zull-gateway-test
+server:
+  port: 9090
 #   将当前模块配置进eureka  
 eureka:
   client:
