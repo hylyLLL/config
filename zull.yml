@@ -1,11 +1,3 @@
-# 默认使用的配置
-spring:
-  profiles:
-    actives:
-      -dev
-
-
----
 spring:
   profiles: dev  #开发环境
   application:
