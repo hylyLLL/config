@@ -8,12 +8,44 @@ spring:
 spring:
   profiles: dev  #开发环境
   application:
-    name: com-syzw-dev
+    name: eureka-server-dev
+# 
+server:
+  port: 8080
+# eureka服务注册
+eureka:
+  client:
+    #把自己注册进ᵽeureka server
+    register-with-eureka: false
+    #false表示不扫描自己
+    fetch-registry: false
+    #eurka服务集群
+  #    serviceUrl:
+  #      defaultZon: http://localhost:8080
+  #当前实例地址
+  instance:
+    hostname: localhost
+
 
 ---
 spring:
   profiles: test  #测试环境
   application:
-    name: com-syzw-test
+    name: eureka-server-test
+server:
+  port: 8080
+# eureka服务注册
+eureka:
+  client:
+    #把自己注册进ᵽeureka server
+    register-with-eureka: false
+    #false表示不扫描自己
+    fetch-registry: false
+    #eurka服务集群
+  #    serviceUrl:
+  #      defaultZon: http://localhost:8080
+  #当前实例地址
+  instance:
+    hostname: localhost
 
 #该文件必须另存为utf-8否则会出问题
