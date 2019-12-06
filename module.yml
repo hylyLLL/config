@@ -10,6 +10,21 @@ server:
     driver-class-name: com.mysql.jdbc.Driver
     url: jdbc:mysql://localhost:3306/ztkj?serverTimezone=UTC&useUnicode=true&characterEncoding=utf-8
 
+eureka:
+  client:
+    #当前服务是否是注册中心
+    fetch-registry: false
+    #指定要注册的eureka  server的地址
+    #将当前服务注册进eureka  server
+    register-with-eureka: true
+    serviceUrl:
+      defaultZone: http://localhost:8080/eureka
+  instance:
+    #显示ip地址
+    prefer-ip-address: true
+    #指定ip地址
+    ip-address: localhost
+
 # logging:
 #   config: classpath:log4j.properties
 
