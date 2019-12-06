@@ -1,9 +1,10 @@
+server:
+  port: 8081
+  
 spring:
   profiles: dev  #开发环境
   application:
     name: bbs-dev
-server:
-  port: 8081
   datasource:
     username: root
     password: root
