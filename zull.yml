@@ -1,3 +1,4 @@
+# 默认使用的配置
 spring:
   profiles:
     actives:
@@ -8,12 +9,28 @@ spring:
 spring:
   profiles: dev  #开发环境
   application:
-    name: com-syzw-dev
+    name: zull-gateway-dev    
+#   将当前模块配置进eureka  
+eureka:
+  client:
+#    是否将当前模块服务注册进eureka服务端
+    register-with-eureka: true
+    serviceUrl:
+      defaultZone: http://localhost:8080/eureka/
+
+    
 
 ---
 spring:
   profiles: test  #测试环境
   application:
-    name: com-syzw-test
+    name: zull-gateway-test
+#   将当前模块配置进eureka  
+eureka:
+  client:
+#    是否将当前模块服务注册进eureka服务端
+    register-with-eureka: true
+    serviceUrl:
+      defaultZone: http://localhost:8080/eureka/
 
 #该文件必须另存为utf-8否则会出问题
